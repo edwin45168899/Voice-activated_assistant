@@ -484,3 +484,7 @@ $RECYCLE.BIN/
 # Whisper models
 ggml-tiny-q5_1.bin
 ggml-tiny-zh_tw.bin
+ggml-base-q5_1.bin
+ggml-small-q5_1.bin
+ggml-medium-q5_1.bin
+

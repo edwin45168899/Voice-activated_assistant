@@ -21,10 +21,15 @@ Console.WriteLine($"目前的工作目錄: {currentDirectory}");
 Console.WriteLine("\n請選擇使用的模型版本：");
 Console.WriteLine("1. 官方最小模型 (Tiny, 約 31MB) - [自動下載]");
 Console.WriteLine("2. 繁體中文微調模型 (Tiny-zh-TW, 約 74MB) - [需手動下載]");
-Console.Write("請輸入選擇 (1 或 2，預設為 1): ");
+Console.WriteLine("3. 官方基礎模型 (Base, 約 73MB) - [自動下載, CP值最高]");
+Console.WriteLine("4. 官方小型模型 (Small, 約 153MB) - [自動下載, 準確與效能兼備]");
+Console.WriteLine("5. 官方中型模型 (Medium, 約 469MB) - [自動下載, 適合中階配備, 幻覺極低]");
+Console.Write("請輸入選擇 (1, 2, 3, 4 或 5，預設為 1): ");
 
 string choice = Console.ReadLine() ?? "1";
 string modelName;
+GgmlType? downloadType = null;
+
 if (choice == "2")
 {
     modelName = "ggml-tiny-zh_tw.bin";
@@ -38,19 +43,39 @@ if (choice == "2")
         return;
     }
 }
+else if (choice == "3")
+{
+    modelName = "ggml-base-q5_1.bin";
+    downloadType = GgmlType.Base;
+}
+else if (choice == "4")
+{
+    modelName = "ggml-small-q5_1.bin";
+    downloadType = GgmlType.Small;
+}
+else if (choice == "5")
+{
+    modelName = "ggml-medium-q5_1.bin";
+    downloadType = GgmlType.Medium;
+}
 else
 {
     modelName = "ggml-tiny-q5_1.bin";
+    downloadType = GgmlType.Tiny;
+}
+
+if (downloadType != null)
+{
     if (File.Exists(modelName))
     {
         Console.WriteLine($"✅ {modelName} 檔案已經存在，不須下載模型");
     }
     else
     {
-        Console.WriteLine($"\n🈚 {modelName} 檔案不存在，準備從官方下載最小模型 (GgmlType.Tiny)");
+        Console.WriteLine($"\n🈚 {modelName} 檔案不存在，準備從官方下載模式 ({downloadType})");
 
         using var httpClient = new HttpClient();
-        using var modelStream = await new WhisperGgmlDownloader(httpClient).GetGgmlModelAsync(GgmlType.Tiny, QuantizationType.Q5_1);
+        using var modelStream = await new WhisperGgmlDownloader(httpClient).GetGgmlModelAsync(downloadType.Value, QuantizationType.Q5_1);
         using var fileWriter = File.OpenWrite(modelName);
         await modelStream.CopyToAsync(fileWriter);
         Console.WriteLine($"✅ {modelName} 下載完成！");

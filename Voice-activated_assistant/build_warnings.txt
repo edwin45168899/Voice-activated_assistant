@@ -1,0 +1,18 @@
+  正在判斷要還原的專案...
+  所有專案都在最新狀態，可進行還原。
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(79,19): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(84,1): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer.Speak(string)'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(80,1): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer.SetOutputToDefaultAudioDevice()'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(89,12): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer.State'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+  Voice-activated_assistant -> D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\bin\Debug\net10.0\Voice-activated_assistant.dll
+
+建置成功。
+
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(79,19): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(84,1): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer.Speak(string)'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(80,1): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer.SetOutputToDefaultAudioDevice()'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Program.cs(89,12): warning CA1416: 可在所有平台上連線到此呼叫網站。只有 'windows' 支援 'SpeechSynthesizer.State'。 (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\github\chiisen\Voice-activated_assistant\Voice-activated_assistant\Voice-activated_assistant.csproj]
+    4 個警告
+    0 個錯誤
+
+經過時間 00:00:01.23
